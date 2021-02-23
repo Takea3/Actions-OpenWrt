@@ -95,7 +95,7 @@ jobs:
     - name: Download package
       id: package
       run: |
-        [ -e $CONFIG_FILE1 ] && mv $CONFIG_FILE1 openwrt/build_dir/target-x86_64_musl/linux-x86_64/linux-5.4.95/.config
+#        [ -e $CONFIG_FILE1 ] && mv $CONFIG_FILE1 openwrt/build_dir/target-x86_64_musl/linux-x86_64/linux-5.4.95/.config
         cd openwrt
         make defconfig
         make download -j8
