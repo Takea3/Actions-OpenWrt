@@ -79,6 +79,7 @@ jobs:
       run: |
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        make kernel_menuconfig -j8
         [ -e $CONFIG_FILE1 ] && mv $CONFIG_FILE1 openwrt/build_dir/target-x86_64_musl/linux-x86_64/linux-5.4.95/.config
         chmod +x $DIY_P2_SH
         cd openwrt
